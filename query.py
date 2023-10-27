@@ -20,6 +20,10 @@ def search_cast(name: str) -> None:
       print(movie['name'])
       print(str(casts))
 
+def list_movies() -> None:
+  for movie in movies._movies:
+      print(movie['name'])
+
 def menu() -> None:
   print("q: quit\nsn: search movie names\nsc: search casts\nlist: print all movie names")
   x = input("").strip().lower()
@@ -32,7 +36,7 @@ def menu() -> None:
       name = input("  enter a word to search: ").lower()
       search_cast(name)
     elif x == "list":
-      print("call list function")
+      list_movies()
     print()
     menu()
 
