@@ -9,14 +9,13 @@ def search_names(name: str) -> None:
       continue
 
 def search_cast(name: str) -> None:
-  casts = []
   for movie in movies._movies:
-    matched = False
+    casts = []
     for cast in movie['cast']:
       if cast.lower().find(name) >= 0:
         matched = True
         casts.append(cast)
-    if matched:
+    if casts:
       print(movie['name'])
       print(str(casts))
 
